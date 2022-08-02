@@ -253,8 +253,7 @@ equal.addEventListener('click', () => {
         case evaluation.includes("+"):
             let sepPlus = evaluation.split("+")
             let answerPlus = parseFloat(sepPlus[0]) + parseFloat(sepPlus[1])
-            console.log(answerPlus)
-            console.log(typeof(evaluation))
+           
             text.textContent = answerPlus.toFixed(2)
             evaluation = answerPlus.toFixed(2)
             break;
@@ -263,7 +262,7 @@ equal.addEventListener('click', () => {
             let sepMinus = evaluation.split("-")
             let answerMinus = parseFloat(sepMinus[0]) - parseFloat(sepMinus[1])
             text.textContent = answerMinus.toFixed(2)
-            console.log(sepMinus)
+            
             evaluation = answerMinus.toFixed(2)
             break;
         
@@ -271,7 +270,7 @@ equal.addEventListener('click', () => {
             let sepMultiply = evaluation.split("*")
             let answerMultiply = parseFloat(sepMultiply[0]) * parseFloat(sepMultiply[1])
             text.textContent = answerMultiply.toFixed(2)
-            console.log(sepMultiply)
+            
             evaluation = answerMultiply.toFixed(2)
             break;
         
@@ -279,7 +278,7 @@ equal.addEventListener('click', () => {
             let sepDivide = evaluation.split("/")
             let answerDivide = parseFloat(sepDivide[0]) / parseFloat(sepDivide[1])
             text.textContent = answerDivide.toFixed(2)
-            console.log(sepDivide)
+            
             evaluation = answerDivide.toFixed(2)
             break;
 
@@ -287,13 +286,13 @@ equal.addEventListener('click', () => {
             let sepModulo = evaluation.split("%")
             let answerModulo = parseInt(sepModulo[0]) % parseInt(sepModulo[1])
             text.textContent = answerModulo.toFixed(2)
-            console.log(sepModulo)
+            
             evaluation = answerModulo.toFixed(2)
             break;
 
     }
 
-    console.log(evaluation)
+    
 
 })
 
@@ -308,13 +307,12 @@ allClear.addEventListener("click", ()=>{
 // build the clear function
 
 clear.addEventListener("click", ()=>{
-    console.log(typeof(evaluation))
+    
     let evaArray = evaluation.toString().split("")
     evaArray.pop()
     text.textContent = evaArray.join("")
     evaluation = evaArray.join("")
-    console.log(evaArray)
-    console.log(evaluation)
+    
 })
 
 
